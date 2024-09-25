@@ -12,6 +12,7 @@
 
     <script src="controllers/HomeController.js"></script>
     <script src="controllers/DetailController.js"></script>
+    <script src="controllers/AddController.js"></script>
 </head>
 <body ng-app="wd19205">
     <h1 class="text-center">WD19205</h1>
@@ -19,10 +20,10 @@
         <div class="container justify-content-center">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="">Home</a>
+                    <a href="#!/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="">Add</a>
+                    <a href="#!/add">Add</a>
                 </li>
             </ul>
         </div>
@@ -39,8 +40,8 @@
                 templateUrl: './views/Home.html', //đường dẫn đến file giao diện
                 controller: HomeController, //khai báo controller xử lý logic
             }).when('/add', {
-                // templateUrl: ,
-                // controller: 
+                templateUrl: './views/add.html',
+                controller: AddController
             }).when('/detail/:id', { //hiển thị thông tin chi tiết
                 templateUrl: './views/detail.html',
                 controller: DetailController
