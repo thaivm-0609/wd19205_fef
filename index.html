@@ -13,6 +13,7 @@
     <script src="controllers/HomeController.js"></script>
     <script src="controllers/DetailController.js"></script>
     <script src="controllers/AddController.js"></script>
+    <script src="controllers//EditController.js"></script>
 </head>
 <body ng-app="wd19205">
     <h1 class="text-center">WD19205</h1>
@@ -45,6 +46,9 @@
             }).when('/detail/:id', { //hiển thị thông tin chi tiết
                 templateUrl: './views/detail.html',
                 controller: DetailController
+            }).when('/edit/:id', {
+                templateUrl: './views/edit.html',
+                controller: EditController
             }).otherwise({
                 templateUrl: './views/404.html',
             })

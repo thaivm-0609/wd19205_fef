@@ -7,7 +7,11 @@
         <div class="card-body">
             <h5 class="card-title"> {{ pro.name }} </h5>
             <p class="card-text"> {{ pro.price }} </p>
-            <a href="#!/detail/{{pro.id}}" class="btn btn-primary">Go somewhere</a>
+            <div class="row">
+                <a href="#!/detail/{{pro.id}}" class="col btn btn-primary">Detail</a>
+                <a href="#!/edit/{{pro.id}}" class="col btn btn-warning">Edit</a>
+                <a ng-click="onDelete(pro.id)" class="col btn btn-danger">Delete</a>
+            </div>
         </div>
     </div>
 </div>

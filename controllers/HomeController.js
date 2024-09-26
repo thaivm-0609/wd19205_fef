@@ -12,4 +12,14 @@ window.HomeController = function ($scope, $http) {
 
     //thực thi hàm getProducts
     $scope.getProducts();
+
+    $scope.onDelete = function (id) {
+        if (confirm('Are you sure?')) { //nếu người dùng xác nhận ok
+            $http.delete(`${apiUrl}/${id}`).then(response => {
+                if (response.status == 200) {
+                    alert('Xóa thành công');
+                }
+            })
+        }
+    }
 }

@@ -1,0 +1,22 @@
+<form>
+    <div>
+        <label class="form-label" for="">Tên</label>
+        <input class="form-control" ng-model="inputValue.name" type="text" name="name">
+    </div>
+    <div>
+        <label class="form-label" for="">Giá</label>
+        <input class="form-control" ng-model="inputValue.price" type="text" name="price">
+    </div>
+    <div>
+        <label class="form-label" for="">Ảnh</label>
+        <input class="form-control" ng-model="inputValue.image" type="text" name="image">
+    </div>
+    <center>
+        <button 
+            class="btn btn-success mt-2"
+            ng-click="onEdit()"
+        >
+            Edit
+        </button>
+    </center>
+</form>
